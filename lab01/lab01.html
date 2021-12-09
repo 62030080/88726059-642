@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lab01</title>
+    <style>
+    img {
+        border: 0.5px solid rgb(231, 231, 231);
+        }
+    table, th, td {
+        border: 0.5px solid rgb(187, 187, 187);
+        border-collapse: collapse;
+        }
+    .item1 {
+        grid-area: main;
+        }
+    .item3 {
+        grid-area: right;
+        }
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'main   right ';
+        grid-gap: 10px;
+        background-color: #ffffffee;
+        padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <br>
+    <div class="grid-container">
+
+    <div class="item1">
     <h1><font face="arial">My site</font></h1>
     <hr size="5" color="#7DCEA0">
     <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit. Proin id tellus</p>
@@ -19,7 +44,7 @@
     <p>Mauris feugiat</p><br>
     <h2>Image In Text</h2>
     <hr size="5" color="#7DCEA0">
-    <img src="img/apple.jpg" alt="apple" border="1" width="15%" height="15%" style="float:left;">
+    <img src="img/apple.jpg" alt="apple" border="1" width="35%" height="15%" style="float:left;">
     Lorem ipsum dolor sit amet,<br>
     consectetuer adipiscing elit. Proin id<br>
     tellus. Nam accumsan tincidunt quam.<br>
@@ -43,5 +68,34 @@
     <tr><td style="vertical-align:top">&nbsp; Comments:</td><td><textarea cols="40" rows="10"></textarea></td></tr>
     <tr><td></td><td><button type="button">Send message</button></td></tr>
     </table>
+    </div>
+    <div class="item3">
+        <br><br><br><br><br>
+        <table width="36%" bgcolor="#F2F3F4">
+            <tr><th>Main Sidebar</th></tr>
+            <tr>
+                <th align="left">
+                This is an example of a<br>
+                paragraph in the sidebar<br>
+                followed by an example of<br>
+                sidebar links.<br><br>
+                <ul>
+                    <li><a href="https://www.free-css.com/free-css-templates">More free Templates</a></li>
+                    <li><a href="https://www.upwork.com/hire/web-designers/">Freelance Web Designer</a></li>
+                    <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/link/link.html">Some Example Links</a></li>
+                    <li><a href="https://www.free-css.com/free-css-templates">Donec sed est ut felis</a></li>
+                </ul><br>
+                <p>This is a form in the sidebar.</p>
+                <input type="text"> <button type="button">Search</button><br>
+                <p>Images that would be good<br>
+                   for advertsment or a sample<br>
+                   gallery:
+                </p>
+                <img src="img/bestad.jpg" alt="best advertsment" height="100%" width="100%">
+                </th>
+            </tr>
+        </table>
+    
+    </div>
 </body>
 </html>
