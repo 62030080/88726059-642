@@ -1,0 +1,111 @@
+body {
+    font-family: Arial;
+    background-color: rgb(255, 255, 255);
+}
+.mbody{
+    background-color: rgb(100, 0, 0);
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+.foodp {
+    font-size: 50px ;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
+
+.foodtable {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 10%;
+}
+
+.button {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+}
+  
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+  
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4caf96;
+}
+  
+.button2:hover {
+    background-color: #4caf96;
+    color: white;
+}
+  
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4c93af;
+}
+  
+.button3:hover {
+    background-color: #4c93af;
+    color: white;
+}
+  
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4c53af;
+}
+  
+.button4:hover {
+    background-color: #4c53af;
+    color: white;
+}
+  
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #7a4caf;
+}
+  
+.button5:hover {
+    background-color: #7a4caf;
+    color: white;
+}
+
+.mp {
+    font-size: 30px;
+    color: white;
+}
+.mtable{
+    margin-left: auto;
+    margin-right: auto;
+}
+.mh {
+    font-size: 50px;
+    color: white;
+}

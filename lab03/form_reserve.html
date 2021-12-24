@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form reserve</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+
+<body>
+    <table border="0" cellspacing="5">
+        <tr>
+            <td>
+                <h1>Hotel Booking</h1>
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/642/88726059/services/post.php">
+            <tr>
+                <td><label for="room type">Room Type</label><br></td>
+                <td><select name="room type" style="background-color:rgba(83, 83, 83, 0.253);">
+                        <option value="0">Please Select</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Deluxe">Deluxe</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="numguest">Number of Guests</label><br></td>
+                <td><select name="numguest" style="background-color:rgba(83, 83, 83, 0.253);">
+                        <option value="0">Please Select</option>
+                        <option value="1-2">1-2</option>
+                        <option value="3-4">3-4</option>
+                        <option value="5-6">5-6</option>
+                        <option value="7-8">7-8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="fame" id="" placeholder="First" value="" style="background-color:rgba(83, 83, 83, 0.253);">&nbsp;<input type="text" name="lname" id="" placeholder="Last" value="" style="background-color:rgba(83, 83, 83, 0.253);"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="" placeholder="john@company.com" value="" style="background-color:rgba(83, 83, 83, 0.253);"></td>
+            </tr>
+            <tr>
+                <td><label for="arrival-d-t">Arrival</label></td>
+                <td><input type="date" name="arrivaldate" id="" value="" style="background-color:rgba(83, 83, 83, 0.253);">&nbsp;<input type="time" name="arrivaltime" id="" value="" style="background-color:rgba(83, 83, 83, 0.253);"></td>
+            </tr>
+            <tr>
+                <td><label for="Departure-d-t">Arrival</label></td>
+                <td><input type="date" name="departuredate" id="" value="" style="background-color:rgba(83, 83, 83, 0.253);">&nbsp;<input type="time" name="departuretime" id="" value="" style="background-color:rgba(83, 83, 83, 0.253);"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;"><label for="pick">Free Pickup</label></td>
+                <td>
+                    <input type="radio" name="pickup" id="Yes" value="Yes">Yes, Sure! <br>
+                    <input type="radio" name="pickup" id="No" value="No">No, I already rented a car.
+                </td>
+            </tr>
+            <tr>
+                <td><label for="flightnum">Flight Number</label></td>
+                <td><input type="text" name="flightnum" id="" placeholder="C1209" value="" style="background-color:rgba(83, 83, 83, 0.253);"></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Other requests</td>
+                <td><Textarea name="otherreq" id="" rows="5" cols="50" style="background-color:rgba(83, 83, 83, 0.253);">other request</Textarea><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Complete Reservation" style="background-color: rgb(70, 70, 70);color: white;padding: 10px 30px;border-radius: 4px;">
+            </tr>
+
+        </form>
+    </table>
+</body>
+
+</html>

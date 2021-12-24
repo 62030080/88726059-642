@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <style>
+    img {
+        border: 0.5px solid rgb(231, 231, 231);
+        }
+    table, th, td {
+        border: 0.5px solid rgb(187, 187, 187);
+        border-collapse: collapse;
+        }
+    .item1 {
+        grid-area: main;
+        }
+    .item3 {
+        grid-area: right;
+        }
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'main   right ';
+        grid-gap: 10px;
+        background-color: #ffffffee;
+        padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+    <div class="item1">
+    <h1><font face="arial">My site</font></h1>
+    <hr style="height:5px ;width: 500px;" color="#7DCEA0" align="left">
+    <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit. Proin id tellus</p>
+    <p>Nam accumsan tincidunt quam. Cumsociis natoque penatibus et magnis</p>
+    <p>dis parturient montes, nascetur ridiculus mus. Donec sed est ut felis</p>
+    <p>scelerisque semper. Phasellus pretium hendrerit risus. Morbi malesuada.</p>
+    <p>Duis porttitor tincidunt neque. Phasellus eget velit a mi aliquam</p>
+    <p>molestie. Vestibulum lacinia viverra nisl. Praesent rutrum varius justo.</p>
+    <p>Mauris feugiat</p><br>
+    <h2>Image In Text</h2>
+    <hr style="height:5px ;width: 500px;" color="#7DCEA0" align="left">
+    <img src="images/apple.jpg" alt="apple" border="1" width="35%" height="15%" style="float:left;">
+    Lorem ipsum dolor sit amet,<br>
+    consectetuer adipiscing elit. Proin id<br>
+    tellus. Nam accumsan tincidunt quam.<br>
+    Cum sociis natoque penatibus et magnis<br>
+    dis parturient montes, nascetur ridiculus<br>
+    mus. Donec sed est ut felis scelerisque<br>
+    semper.<br>
+    <br clear="all">
+    <h2>Time table</h2>
+    <hr style="height:5px ;width: 500px;" color="#7DCEA0" align="left">
+    <table width="300" height="100">
+        <tr bgcolor="#909497"><th> </th><th> </th><th> </th></tr>
+        <tr bgcolor="#CACFD2"><td> </td><td> </td><td> </td></tr>
+        <tr bgcolor="#F2F3F4"><td> </td><td> </td><td> </td></tr>
+    </table>
+    <h3>Form Example</h3>
+    <hr style="height:5px ;width: 500px;" color="#7DCEA0" align="left">
+    <table>
+    <tr><td>&nbsp; Your Name:</td><td><input type="text"></td></tr>
+    <tr><td>&nbsp; Your e-mail:</td><td><input type="text"></td></tr>
+    <tr><td style="vertical-align:top">&nbsp; Comments:</td><td><textarea cols="40" rows="10"></textarea></td></tr>
+    <tr><td></td><td><button type="button">Send message</button></td></tr>
+    </table>
+    </div>
+    <div class="item3">
+        <br><br><br><br><br>
+        <table width="36%" bgcolor="#F2F3F4">
+            <tr><th>Main Sidebar</th></tr>
+            <tr>
+                <th align="left">
+                This is an example of a<br>
+                paragraph in the sidebar<br>
+                followed by an example of<br>
+                sidebar links.<br><br>
+                <ul>
+                    <li><a href="https://www.free-css.com/free-css-templates">More free Templates</a></li>
+                    <li><a href="https://www.upwork.com/hire/web-designers/">Freelance Web Designer</a></li>
+                    <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/link/link.html">Some Example Links</a></li>
+                    <li><a href="https://www.free-css.com/free-css-templates">Donec sed est ut felis</a></li>
+                </ul><br>
+                <p>This is a form in the sidebar.</p>
+                <input type="text"> <button type="button">Search</button><br>
+                <p>Images that would be good<br>
+                   for advertsment or a sample<br>
+                   gallery:
+                </p>
+                <img src="images/bestad.jpg" alt="best advertsment" height="100%" width="100%">
+                </th>
+            </tr>
+        </table>
+    
+    </div>
+</body>
+</html>
