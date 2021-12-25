@@ -5,6 +5,9 @@ body {
 .mbody{
     background-color: rgb(100, 0, 0);
 }
+.fbody{
+    background-color: rgb(202, 135, 28);
+}
 
 h1 {
     color: rgb(0, 0, 0);
@@ -14,6 +17,10 @@ h1 {
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
+}
+.foodpp {
+    font-size: 20px ;
+    color: rgb(0, 0, 0);
 }
 
 .foodtable {
