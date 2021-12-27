@@ -6,35 +6,60 @@ body {
     background-color: rgb(100, 0, 0);
 }
 .fbody{
-    background-color: rgb(202, 135, 28);
+    background-color: #cccccc;
+    background-image: url("/lab03/images/bgfood.jpg");
 }
 
 h1 {
     color: rgb(0, 0, 0);
 }
 .foodp {
-    font-size: 50px ;
+    font-size: 30px ;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: left;
+}
+.foodphead {
+    font-size: 60px ;
     color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
+    animation: color-change 5s infinite;
 }
 .foodpp {
-    font-size: 20px ;
+    font-size: 30px ;
     color: rgb(0, 0, 0);
+    /*animation: color-change 5s infinite;*/
 }
+
+@keyframes color-change {
+    0% { color: rgb(255, 0, 0); }
+    25% { color: rgb(0, 255, 55); }
+    50% { color: rgb(0, 162, 255); }
+    75% { color: rgb(0, 47, 255); }
+    100% { color: rgb(204, 0, 255); }
+}
+
+
 
 .foodtable {
     margin-left: auto;
     margin-right: auto;
 }
-.center {
+.trtext {
+    height: 20%;
+
+}
+.trblink:hover {background-color: rgba(218, 168, 6, 0.801);}
+
+.foodimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
     border-radius: 10%;
 }
-
+/* -------------------------------------------------------------------------------- */
 .button {
     border: none;
     padding: 16px 32px;
