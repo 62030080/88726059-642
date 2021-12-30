@@ -40,6 +40,11 @@ h1 {
     100% { color: rgb(204, 0, 255); }
 }
 
+hr.l1 {
+    border: 3px solid #7DCEA0;
+    background-color: #7DCEA0;
+    border-radius: 2px;
+}
 
 
 .foodtable {
@@ -141,3 +146,29 @@ h1 {
     font-size: 50px;
     color: white;
 }
+
+
+
+
+/* for lab1 */
+.imgl1 {
+    border: 0.5px solid rgb(231, 231, 231);
+    }
+.tablel1, .thl1, .tdl1 {
+    border: 0.5px solid rgb(187, 187, 187);
+    border-collapse: collapse;
+    }
+.item1l1 {
+    grid-area: main;
+    }
+.item3l1 {
+    grid-area: right;
+    }
+.grid-containerl1 {
+    display: grid;
+    grid-template-areas:
+        'main   right ';
+    grid-gap: 10px;
+    background-color: #ffffffee;
+    padding: 10px;
+    }
