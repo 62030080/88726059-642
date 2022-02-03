@@ -36,7 +36,7 @@ function validateUserID(uid, min, max) {
         alert(error);
         uid.focus();
         return false;
-    } else if ((uid.value.length < min) || (uid.value. length > max)) {
+    } else if ((uid.value.length < min) || (uid.value.length > max)) {
         uid.style.background = 'Yellow';
         error = "User ID ต้องมีความยาว " + min + "-" + max + " ตัวอักษร\n";
         alert(error);
@@ -64,7 +64,7 @@ function validatePassword(passid, min, max) {
         alert(error);
         passid.focus();
         return false;
-    } else if ((passid.value. length < 7) || (passid.value.length > 15)) {
+    } else if ((passid.value.length < 7) || (passid.value.length > 15)) {
         error = "Password o ต้องมีความยาว " + min + "-" + max + " ตัวอักษร\n";
         passid.style.background = 'Yellow';
         alert(error);
@@ -125,7 +125,7 @@ function allnumeric(uzip) {
     if (uzip.value.match(numbers)) {
         return true;
     } else {
-        alert('ZIP Code iosiduaiainuu ' ) ;
+        alert('ZIP Code ต้องเป็นตัวเลขเท่านั้น ' ) ;
         uzip.focus();
         return false;
     }
