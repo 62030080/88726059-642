@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+#newgamearea {
+    margin-top: 2cm;
+}
+
+#clue, #guesses {
+    font-family: monospace;
+    font-size: 2cm;
+    padding: 1cm;
+}

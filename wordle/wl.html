@@ -1,0 +1,167 @@
+<!--    I = [A, P, P, L, E];
+    II = [B,A,K,E,D];
+    III = [C,A,M,E,L];
+    IV = [D,A,I,L,Y];
+    V = [E,M,P,T,Y];
+    VI = [F,E,E,D,S];
+    VII = [G,E,C,K,O];
+    VIII = [H,A,V,E,N];
+    IX = [I,N,T,R,O];
+    X = [J,E,A,N,S];
+    XI = [K,N,I,F,E];
+    XII = [L,E,G,I,T];
+    XIII = [M,E,R,C,Y];
+    XIV = [N,A,P,P,Y];
+    XV = [O,R,G,A,N];
+    XVI = [P,E,C,A,N];
+    XVII = [Q,U,E,S,T];
+    XVIII = [R,A,C,E,R];
+    XIX = [S,C,O,O,P];
+    XX = [T,A,B,O,O];
+
+    I = ['A', 'P', 'P', 'L', 'E'];
+    II = ['B','A','K','E','D'];
+    III = ['C','A','M','E','L'];
+    IV = ['D','A','I','L','Y'];
+    V = ['E','M','P','T','Y'];
+    VI = ['F','E','E','D','S'];
+    VII = ['G','E','C','K','O'];
+    VIII = ['H','A','V','E','N'];
+    IX = ['I','N','T','R','O'];
+    X = ['J','E','A','N','S'];
+    XI = ['K','N','I','F','E'];
+    XII = ['L','E','G','I','T'];
+    XIII = ['M','E','R','C','Y'];
+    XIV = ['N','A','P','P','Y'];
+    XV = ['O','R','G','A','N'];
+    XVI = ['P','E','C','A','N'];
+    XVII = ['Q','U','E','S','T'];
+    XVIII = ['R','A','C','E','R'];
+    XIX = ['S','C','O','O','P'];
+    XX = ['T','A','B','O','O'];
+    RDAR =[I,II,III,IV,V,VI,VII,VIII,IIX,IX,X,XI,XII,XIII,XIV,XV,XVI,XVII,XVIII,XIX,X]-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Wordle</title>
+</head>
+
+<body>
+    <h1>เกมทายศัพท์</h1>
+    <input class="in1" type="text" id="word1">
+    <input class="in1" type="text" id="word2">
+    <input class="in1" type="text" id="word3">
+    <input class="in1" type="text" id="word4">
+    <input class="in1" type="text" id="word5">
+    <input type="button" value="Guess" onClick="guess()">
+    <!-- <input type="button" value="New" onClick="NewGame()"> -->
+    <div id="result"></div>
+    <div id="YES"></div>
+
+
+
+
+    <script>
+        I = ['A', 'P', 'P', 'L', 'E'];
+        II = ['B', 'A', 'K', 'E', 'D'];
+        III = ['C', 'A', 'M', 'E', 'L'];
+        IV = ['D', 'A', 'I', 'L', 'Y'];
+        V = ['E', 'M', 'P', 'T', 'Y'];
+        VI = ['F', 'E', 'E', 'D', 'S'];
+        VII = ['G', 'E', 'C', 'K', 'O'];
+        VIII = ['H', 'A', 'V', 'E', 'N'];
+        IX = ['I', 'N', 'T', 'R', 'O'];
+        X = ['J', 'E', 'A', 'N', 'S'];
+        XI = ['K', 'N', 'I', 'F', 'E'];
+        XII = ['L', 'E', 'G', 'I', 'T'];
+        XIII = ['M', 'E', 'R', 'C', 'Y'];
+        XIV = ['N', 'A', 'P', 'P', 'Y'];
+        XV = ['O', 'R', 'G', 'A', 'N'];
+        XVI = ['P', 'E', 'C', 'A', 'N'];
+        XVII = ['Q', 'U', 'E', 'S', 'T'];
+        XVIII = ['R', 'A', 'C', 'E', 'R'];
+        XIX = ['S', 'C', 'O', 'O', 'P'];
+        XX = ['T', 'A', 'B', 'O', 'O'];
+
+        AW = [I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, X];
+        rdn = Math.floor(Math.random() * (19)) + 1;
+        RAW = AW[rdn];
+        console.log(rdn);
+        console.log(RAW);
+        console.log(RAW[0]);
+
+
+        function guess() {
+            result = document.getElementById('result')
+            word1 = document.getElementById('word1').value;
+            word2 = document.getElementById('word2').value;
+            word3 = document.getElementById('word3').value;
+            word4 = document.getElementById('word4').value;
+            word5 = document.getElementById('word5').value;
+            Answ = [word1, word2, word3, word4, word5];
+            checkposition = "";
+            checkhave = "";
+            console.log(Answ);
+            
+
+            for (let i = 0; i < 5; i++) {
+                if (RAW.includes(Answ[i])) {
+                    if (Answ[i] == RAW[i]) {
+                        checkhave = Answ[i];
+
+                    } else { checkhave = "!" + Answ[i] }
+                }
+                else { checkhave = "X" + Answ[i] }
+                result.innerHTML += " | " + checkhave + " | ";
+            } result.innerHTML += "<br>";
+            console.log(RAW[0]);
+            console.log(RAW[1]);
+            console.log(RAW[2]);
+            console.log(RAW[3]);
+            console.log(RAW[4]);
+
+            correct = document.getElementById('YES');
+            console.log(correct);
+            if (Answ != RAW) { correct.innerHTML = "ยังไม่ถูก"; }
+            if (Answ[0] == RAW[0] &&
+                Answ[1] == RAW[1] &&
+                Answ[2] == RAW[2] &&
+                Answ[3] == RAW[3] &&
+                Answ[4] == RAW[4]) { correct.innerHTML = "ถูกต้องนะค้าบ"; }
+
+
+
+            // if(word1 == '') {alert('You must put 1st Letter')}
+            // else if(word1 == RAW[0]) {result.innerHTML = word1}
+            // else if(word1 == RAW[1] || RAW[2] || RAW[3] || RAW[4])
+            // {result.innerHTML = '!' + word1}
+            // else if(word1 != RAW[0] && RAW[1] && RAW[2] && RAW[3] && RAW[4] && RAW[5] && '')
+            // {result.innerHTML = 'X' + word1}
+
+        }
+
+
+
+
+            // w = document.getElementById(word1,word2,word3,word4,word5);
+            // h = document.getElementById('history');
+            // h.innerHTML += UW + ",\n" ;
+            // result = document.getElementById('result');
+            // if (w != ) {result.innerHTML = "<p>ยังไม่ใช่</p>"; }
+            // if (w == random_game_vocabulary) {result.innerHTML = "<p>คำตอบถูกต้อง</p>";}
+
+            // document.write(randomMonth);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
