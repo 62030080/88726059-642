@@ -57,12 +57,12 @@
 
 
     <h1>เกมทายศัพท์</h1>
-    <input class="in1" type="text" id="word1" maxlength="1">
-    <input class="in1" type="text" id="word2" maxlength="1">
-    <input class="in1" type="text" id="word3" maxlength="1">
-    <input class="in1" type="text" id="word4" maxlength="1">
-    <input class="in1" type="text" id="word5" maxlength="1">
-    <input type="button" value="Guess" onClick="rcount()">
+    <input class="in1" type="text" id="word1" maxlength="1" onkeyup="word2.focus()">
+    <input class="in1" type="text" id="word2" maxlength="1" onkeyup="word3.focus()">
+    <input class="in1" type="text" id="word3" maxlength="1" onkeyup="word4.focus()">
+    <input class="in1" type="text" id="word4" maxlength="1" onkeyup="word5.focus()">
+    <input class="in1" type="text" id="word5" maxlength="1" onkeyup="gbut.focus()">
+    <input type="button" value="Guess" id="gbut" onClick="rcount()">
     <!-- <input type="button" value="New" onClick="NewGame()"> -->
     <div id="result"></div>
     <div id="YES"></div>
