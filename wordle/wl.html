@@ -52,6 +52,10 @@
 </head>
 
 <body>
+
+
+
+
     <h1>เกมทายศัพท์</h1>
     <input class="in1" type="text" id="word1">
     <input class="in1" type="text" id="word2">
@@ -87,19 +91,19 @@
         XX = ['T', 'A', 'B', 'O', 'O'];
 
         AW = [I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, X];
-        rdn = Math.floor(Math.random() * (19)) + 1;
+        rdn = Math.floor(Math.random() * AW.length);
         RAW = AW[rdn];
         console.log(rdn);
         console.log(RAW);
         console.log(RAW[0]);
         var count = 0;
-        function rcount(){
-            count = count+1;
+        function rcount() {
+            count = count + 1;
             if (count == 5) {
                 alert("Game over\n" + "กด Ok เพื่อเริ่มใหม่");
                 location.reload();
             }
-            else{
+            else {
                 guess()
             }
         }
@@ -123,42 +127,47 @@
             checkposition = "";
             checkhave = "";
             console.log(Answ);
-            
-            if (word1 == ""){
+
+            if (word1 == "") {
                 alert('You must put 1st Letter');
                 location.reload();
                 return false;
             } else
-            if (word2 == ""){
-                alert('You must put 2nd Letter');
-                location.reload();
-                return false;
-            } else
-            if (word3 == ""){
-                alert('You must put 3rd Letter');
-                location.reload();
-                return false;
-            } else
-            if (word4 == ""){
-                alert('You must put 4th Letter');
-                location.reload();
-                return false;
-            } else
-            if (word5 == ""){
-                alert('You must put 5th Letter');
-                location.reload();
-                return false;
-            }
+                if (word2 == "") {
+                    alert('You must put 2nd Letter');
+                    location.reload();
+                    return false;
+                } else
+                    if (word3 == "") {
+                        alert('You must put 3rd Letter');
+                        location.reload();
+                        return false;
+                    } else
+                        if (word4 == "") {
+                            alert('You must put 4th Letter');
+                            location.reload();
+                            return false;
+                        } else
+                            if (word5 == "") {
+                                alert('You must put 5th Letter');
+                                location.reload();
+                                return false;
+                            }
 
             for (let i = 0; i < 5; i++) {
                 if (RAW.includes(Answ[i])) {
                     if (Answ[i] == RAW[i]) {
-                        checkhave = Answ[i];
+                        //checkhave = Answ[i];
+                        checkhave = "<span class='green'>" + Answ[i] + "</span>";
 
-                    } else { checkhave = "!" + Answ[i] }
+                    } else { //checkhave = "!" + Answ[i]
+                    checkhave = "<span class='gray'>" + Answ[i] + "</span>";
+                    }
                 }
-                else { checkhave = "X" + Answ[i] }
-                result.innerHTML += " | " + checkhave + " | ";
+                else { //checkhave = "X" + Answ[i] 
+                checkhave = "<span class='red'>" + Answ[i] + "</span>";
+                }
+                result.innerHTML += checkhave;
             } result.innerHTML += "<br>";
             console.log(RAW[0]);
             console.log(RAW[1]);
@@ -173,8 +182,7 @@
                 Answ[1] == RAW[1] &&
                 Answ[2] == RAW[2] &&
                 Answ[3] == RAW[3] &&
-                Answ[4] == RAW[4])
-                { correct.innerHTML = "ถูกต้องนะค้าบ";}
+                Answ[4] == RAW[4]) { correct.innerHTML = "ถูกต้องนะค้าบ"; }
 
 
 
@@ -185,7 +193,7 @@
             // else if(word1 != RAW[0] && RAW[1] && RAW[2] && RAW[3] && RAW[4] && RAW[5] && '')
             // {result.innerHTML = 'X' + word1}
 
-        }   
+        }
 
     </script>
 </body>
