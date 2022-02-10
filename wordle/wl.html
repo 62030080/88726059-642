@@ -57,11 +57,11 @@
 
 
     <h1>เกมทายศัพท์</h1>
-    <input class="in1" type="text" id="word1">
-    <input class="in1" type="text" id="word2">
-    <input class="in1" type="text" id="word3">
-    <input class="in1" type="text" id="word4">
-    <input class="in1" type="text" id="word5">
+    <input class="in1" type="text" id="word1" maxlength="1">
+    <input class="in1" type="text" id="word2" maxlength="1">
+    <input class="in1" type="text" id="word3" maxlength="1">
+    <input class="in1" type="text" id="word4" maxlength="1">
+    <input class="in1" type="text" id="word5" maxlength="1">
     <input type="button" value="Guess" onClick="rcount()">
     <!-- <input type="button" value="New" onClick="NewGame()"> -->
     <div id="result"></div>
@@ -183,6 +183,11 @@
                 Answ[2] == RAW[2] &&
                 Answ[3] == RAW[3] &&
                 Answ[4] == RAW[4]) { correct.innerHTML = "ถูกต้องนะค้าบ"; }
+            document.getElementById('word1').value = '';
+            document.getElementById('word2').value = '';
+            document.getElementById('word3').value = '';
+            document.getElementById('word4').value = '';
+            document.getElementById('word5').value = '';
 
 
 
