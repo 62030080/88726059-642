@@ -58,12 +58,10 @@
     <input class="in1" type="text" id="word3">
     <input class="in1" type="text" id="word4">
     <input class="in1" type="text" id="word5">
-    <input type="button" value="Guess" onClick="guess()">
+    <input type="button" value="Guess" onClick="rcount()">
     <!-- <input type="button" value="New" onClick="NewGame()"> -->
     <div id="result"></div>
     <div id="YES"></div>
-
-
 
 
     <script>
@@ -94,20 +92,63 @@
         console.log(rdn);
         console.log(RAW);
         console.log(RAW[0]);
+        var count = 0;
+        function rcount(){
+            count = count+1;
+            if (count == 5) {
+                alert("Game over\n" + "กด Ok เพื่อเริ่มใหม่");
+                location.reload();
+            }
+            else{
+                guess()
+            }
+        }
 
 
         function guess() {
+            // w1 = word1;
+            // w2 = word2;
+            // w3 = word3;
+            // w4 = word4;
+            // w5 = word5;
+
+
             result = document.getElementById('result')
             word1 = document.getElementById('word1').value;
             word2 = document.getElementById('word2').value;
             word3 = document.getElementById('word3').value;
             word4 = document.getElementById('word4').value;
             word5 = document.getElementById('word5').value;
-            Answ = [word1, word2, word3, word4, word5];
+            Answ = [word1.toUpperCase(), word2.toUpperCase(), word3.toUpperCase(), word4.toUpperCase(), word5.toUpperCase()];
             checkposition = "";
             checkhave = "";
             console.log(Answ);
             
+            if (word1 == ""){
+                alert('You must put 1st Letter');
+                location.reload();
+                return false;
+            } else
+            if (word2 == ""){
+                alert('You must put 2nd Letter');
+                location.reload();
+                return false;
+            } else
+            if (word3 == ""){
+                alert('You must put 3rd Letter');
+                location.reload();
+                return false;
+            } else
+            if (word4 == ""){
+                alert('You must put 4th Letter');
+                location.reload();
+                return false;
+            } else
+            if (word5 == ""){
+                alert('You must put 5th Letter');
+                location.reload();
+                return false;
+            }
 
             for (let i = 0; i < 5; i++) {
                 if (RAW.includes(Answ[i])) {
@@ -132,7 +173,8 @@
                 Answ[1] == RAW[1] &&
                 Answ[2] == RAW[2] &&
                 Answ[3] == RAW[3] &&
-                Answ[4] == RAW[4]) { correct.innerHTML = "ถูกต้องนะค้าบ"; }
+                Answ[4] == RAW[4])
+                { correct.innerHTML = "ถูกต้องนะค้าบ";}
 
 
 
@@ -143,23 +185,7 @@
             // else if(word1 != RAW[0] && RAW[1] && RAW[2] && RAW[3] && RAW[4] && RAW[5] && '')
             // {result.innerHTML = 'X' + word1}
 
-        }
-
-
-
-
-            // w = document.getElementById(word1,word2,word3,word4,word5);
-            // h = document.getElementById('history');
-            // h.innerHTML += UW + ",\n" ;
-            // result = document.getElementById('result');
-            // if (w != ) {result.innerHTML = "<p>ยังไม่ใช่</p>"; }
-            // if (w == random_game_vocabulary) {result.innerHTML = "<p>คำตอบถูกต้อง</p>";}
-
-            // document.write(randomMonth);
-
-
-
-
+        }   
 
     </script>
 </body>
