@@ -15,7 +15,7 @@ if ($_POST){
                 email = ?
             WHERE actor_id = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("ssi", $fname, $lname, $id, $email);
+    $stmt->bind_param("sssi", $fname, $lname, $email, $id);
     $stmt->execute();
 
     header("location: actor.php");

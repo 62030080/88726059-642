@@ -32,7 +32,7 @@
         $sql = "SELECT *
                 FROM actor
                 WHERE concat(first_name, last_name) LIKE ? 
-                ORDER BY first_name";
+                ORDER BY last_update";
 
         // Prepare query
         // Bind all variables to the prepared statement
